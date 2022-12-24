@@ -4,6 +4,8 @@ import com.example.accessingdatajpa.customer.model.CustomerDTO;
 import com.example.accessingdatajpa.customer.model.CustomerEntity;
 import com.example.accessingdatajpa.customer.repository.CustomerRepository;
 import com.example.accessingdatajpa.customer.service.CustomerService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,8 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
 
 
+    private static Logger log = LoggerFactory.getLogger(CustomerServiceImpl.class);
+
     @Autowired
     CustomerRepository customerRepository;
 
@@ -24,11 +28,14 @@ public class CustomerServiceImpl implements CustomerService {
 
         List<CustomerEntity> customers = customerRepository.findAll();
 
+
+        log.info("List<CustomerEntity> ", customers.toString());
+
         List<CustomerDTO> list = new ArrayList<CustomerDTO>();
 
 
-        customers.forEach(customer -> {
-            list.add(new CustomerDTO(customer.getFirstName() + " all done", customer.getLastName() + " all done"));
+        customers.forEach(_customer -> {
+            list.add(new CustomerDTO(_customer.getId() ,_customer.getFirstName() + " all done", _customer.getLastName() + " all done"));
         });
 
         return list;
@@ -40,6 +47,6 @@ public class CustomerServiceImpl implements CustomerService {
 
         CustomerEntity done = customerRepository.save(new CustomerEntity(customer.getFirstName(), customer.getLastName()));
 
-        return new CustomerDTO(done.getFirstName() + " save done", done.getLastName() + " save done");
+        return new CustomerDTO(done.getId(), done.getFirstName() + " save done", done.getLastName() + " save done");
     }
 }
