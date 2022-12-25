@@ -23,13 +23,10 @@ public class CustomerController {
     private Logger log = LoggerFactory.getLogger(CustomerController.class);
 
     @GetMapping("")
-    public ModelAndView greeting() {
-        ModelAndView mav = new ModelAndView();
-
-        mav.setViewName("redirect:/swagger-ui/index.html");
+    public String greeting() {
 
 
-        return mav;
+        return "Hi. Welcome";
     }
 
     @GetMapping("/customers")
