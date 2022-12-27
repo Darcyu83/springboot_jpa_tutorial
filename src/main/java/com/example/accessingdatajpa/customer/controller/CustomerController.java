@@ -23,8 +23,6 @@ public class CustomerController {
 
     @GetMapping("")
     public String greeting() {
-
-
         return "Hi. Welcome";
     }
 
