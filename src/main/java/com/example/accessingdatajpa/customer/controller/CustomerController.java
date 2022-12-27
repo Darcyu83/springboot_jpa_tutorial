@@ -1,18 +1,17 @@
 package com.example.accessingdatajpa.customer.controller;
 
-import com.example.accessingdatajpa.customer.model.CustomerDTO;
+import com.example.accessingdatajpa.customer.vo.CustomerDTO;
 import com.example.accessingdatajpa.customer.service.CustomerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api/v1/customer")
 public class CustomerController {
 
 

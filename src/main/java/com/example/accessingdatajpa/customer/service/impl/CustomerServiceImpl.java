@@ -1,7 +1,7 @@
 package com.example.accessingdatajpa.customer.service.impl;
 
-import com.example.accessingdatajpa.customer.model.CustomerDTO;
-import com.example.accessingdatajpa.customer.model.CustomerEntity;
+import com.example.accessingdatajpa.customer.vo.CustomerDTO;
+import com.example.accessingdatajpa.customer.entity.CustomerEntity;
 import com.example.accessingdatajpa.customer.repository.CustomerRepository;
 import com.example.accessingdatajpa.customer.service.CustomerService;
 import org.slf4j.Logger;

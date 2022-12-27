@@ -27,7 +27,7 @@ public class SwaggerConfig {
                 .consumes(getConsumeContentTypes())
                 .produces(getProduceContentTypes())
                 .apiInfo(swaggerInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.accessingdatajpa.customer.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.accessingdatajpa"))
                 .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(false);

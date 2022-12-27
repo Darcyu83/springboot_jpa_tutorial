@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa.customer.model;
+package com.example.accessingdatajpa.customer.vo;
 
 public class CustomerDTO {
 

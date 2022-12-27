@@ -1,7 +1,6 @@
 package com.example.accessingdatajpa.customer.service;
 
-import com.example.accessingdatajpa.customer.model.CustomerDTO;
-import com.example.accessingdatajpa.customer.model.CustomerEntity;
+import com.example.accessingdatajpa.customer.vo.CustomerDTO;
 
 import java.util.List;
 

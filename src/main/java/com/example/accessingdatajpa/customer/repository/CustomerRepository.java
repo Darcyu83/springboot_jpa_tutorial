@@ -1,9 +1,7 @@
 package com.example.accessingdatajpa.customer.repository;
 
-import com.example.accessingdatajpa.customer.model.CustomerEntity;
+import com.example.accessingdatajpa.customer.entity.CustomerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 
 
 public interface CustomerRepository extends JpaRepository<CustomerEntity, Long> {
