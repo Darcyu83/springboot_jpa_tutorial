@@ -1,7 +1,10 @@
 package com.example.accessingdatajpa;
 
 
+import com.example.accessingdatajpa.product.controller.ProductController;
 import com.example.accessingdatajpa.product.vo.ProductDTO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -11,8 +14,19 @@ import java.util.Map;
 public class HomeController {
 
 
+   private Logger logger = LoggerFactory.getLogger(HomeController.class);
+
+
     @GetMapping
     public String greeting() {
+
+        logger.trace("Trace logger ");
+        logger.debug("debug logger ");
+        logger.info("info logger ");
+        logger.warn("warn logger ");
+        logger.error("error logger ");
+
+
         return "Hello, Welcome To visit";
     }
 
@@ -70,6 +84,5 @@ public class HomeController {
     String postDto(@RequestBody ProductDTO product) {
         return "Done:DTO:: ${user.toString()}";
     }
-
-
 }
+

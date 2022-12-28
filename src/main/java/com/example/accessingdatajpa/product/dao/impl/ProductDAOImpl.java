@@ -10,12 +10,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProductDAOImpl implements ProductDAO {
 
+    @Autowired
     ProductRepository productRepository;
 
-    @Autowired //Dependency Injection
-    public ProductDAOImpl(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
+//    @Autowired //Dependency Injection
+//    public ProductDAOImpl(ProductRepository productRepository) {
+//        this.productRepository = productRepository;
+//    }
 
     @Override
     public ProductEntity saveProduct(ProductEntity product) {

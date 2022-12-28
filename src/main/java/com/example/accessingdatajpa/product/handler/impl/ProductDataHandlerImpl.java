@@ -3,6 +3,7 @@ package com.example.accessingdatajpa.product.handler.impl;
 import com.example.accessingdatajpa.product.dao.ProductDAO;
 import com.example.accessingdatajpa.product.entity.ProductEntity;
 import com.example.accessingdatajpa.product.handler.ProductDataHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -11,12 +12,12 @@ import javax.transaction.Transactional;
 @Service
 @Transactional
 public class ProductDataHandlerImpl implements ProductDataHandler {
-
+    @Autowired
     ProductDAO productDAO;
 
-    public ProductDataHandlerImpl(ProductDAO productDAO) {
-        this.productDAO = productDAO;
-    }
+//    public ProductDataHandlerImpl(ProductDAO productDAO) {
+//        this.productDAO = productDAO;
+//    }
 
     @Override
     public ProductEntity saveProductEntity(ProductEntity productEntity) {

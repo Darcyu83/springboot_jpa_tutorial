@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-
+    @Autowired
     ProductDataHandler productHandler;
 
-    @Autowired
-    public ProductServiceImpl(ProductDataHandler productHandler) {
-        this.productHandler = productHandler;
-    }
+//    @Autowired
+//    public ProductServiceImpl(ProductDataHandler productHandler) {
+//        this.productHandler = productHandler;
+//    }
 
     @Override
     public ProductDTO getProduct(String productId) {
